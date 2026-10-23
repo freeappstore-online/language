@@ -120,20 +120,20 @@ function renderLayout({
     <style>
       :root {
         color-scheme: light;
-        --paper: #fffdf8;
-        --ink: #15120f;
-        --muted: #6b6257;
-        --line: rgba(21, 18, 15, 0.09);
-        --panel: rgba(255, 255, 255, 0.88);
-        --accent: #da5b37;
-        --accent-soft: #f7ddc9;
+        --lesson-paper: #fffdf8;
+        --lesson-ink: #15120f;
+        --lesson-muted: #6b6257;
+        --lesson-line: rgba(21, 18, 15, 0.09);
+        --lesson-panel: rgba(255, 255, 255, 0.88);
+        --lesson-accent: #da5b37;
+        --lesson-accent-soft: #f7ddc9;
         --shadow: 0 18px 45px rgba(85, 58, 26, 0.08);
       }
       * { box-sizing: border-box; }
       body {
         margin: 0;
         font-family: Manrope, system-ui, sans-serif;
-        color: var(--ink);
+        color: var(--lesson-ink);
         background:
           radial-gradient(circle at top left, rgba(218, 91, 55, 0.08), transparent 24%),
           radial-gradient(circle at top right, rgba(77, 112, 220, 0.08), transparent 24%),
@@ -149,25 +149,25 @@ function renderLayout({
         gap: 1rem;
         align-items: center;
         padding: 1rem 1.2rem;
-        border: 1px solid var(--line);
+        border: 1px solid var(--lesson-line);
         border-radius: 1.25rem;
         background: rgba(255,255,255,0.72);
         backdrop-filter: blur(18px);
         box-shadow: var(--shadow);
       }
       .brand { font-weight: 800; letter-spacing: -0.02em; text-decoration: none; }
-      .nav-links { display: flex; flex-wrap: wrap; gap: 0.8rem; font-size: 0.95rem; color: var(--muted); }
+      .nav-links { display: flex; flex-wrap: wrap; gap: 0.8rem; font-size: 0.95rem; color: var(--lesson-muted); }
       .hero {
         margin-top: 1.25rem;
-        border: 1px solid var(--line);
+        border: 1px solid var(--lesson-line);
         border-radius: 1.8rem;
         padding: 1.75rem;
         background: linear-gradient(135deg, rgba(218, 91, 55, 0.12), rgba(255,255,255,0.92));
         box-shadow: var(--shadow);
       }
-      .eyebrow { font-size: 0.72rem; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); }
+      .eyebrow { font-size: 0.72rem; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; color: var(--lesson-muted); }
       h1 { margin: 0.55rem 0 0; font-size: clamp(2rem, 5vw, 3.7rem); line-height: 0.98; letter-spacing: -0.05em; font-family: Fraunces, Georgia, serif; }
-      .lead { max-width: 54rem; margin: 1rem 0 0; font-size: 1.02rem; color: var(--muted); }
+      .lead { max-width: 54rem; margin: 1rem 0 0; font-size: 1.02rem; color: var(--lesson-muted); }
       .actions { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 1.2rem; }
       .button {
         display: inline-flex;
@@ -178,39 +178,39 @@ function renderLayout({
         text-decoration: none;
         font-weight: 700;
       }
-      .button-primary { background: var(--ink); color: white; }
-      .button-secondary { background: white; border: 1px solid var(--line); }
+      .button-primary { background: var(--lesson-ink); color: white; }
+      .button-secondary { background: white; border: 1px solid var(--lesson-line); }
       .grid { display: grid; gap: 1rem; }
       .grid-2 { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
       .grid-3 { grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); }
       .card {
-        border: 1px solid var(--line);
+        border: 1px solid var(--lesson-line);
         border-radius: 1.35rem;
         padding: 1rem 1.05rem;
-        background: var(--panel);
+        background: var(--lesson-panel);
         box-shadow: var(--shadow);
       }
       section { margin-top: 1.15rem; }
       h2 { margin: 0 0 0.6rem; font-size: 1.45rem; letter-spacing: -0.03em; }
       h3 { margin: 0 0 0.35rem; font-size: 1.05rem; letter-spacing: -0.02em; }
       p { margin: 0.45rem 0; }
-      .muted { color: var(--muted); }
+      .muted { color: var(--lesson-muted); }
       .stats { display: grid; gap: 0.8rem; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); }
       .stat-value { font-size: 1.8rem; font-weight: 800; line-height: 1; }
-      .pill { display: inline-block; padding: 0.32rem 0.62rem; border-radius: 999px; background: var(--accent-soft); font-size: 0.76rem; font-weight: 700; }
+      .pill { display: inline-block; padding: 0.32rem 0.62rem; border-radius: 999px; background: var(--lesson-accent-soft); font-size: 0.76rem; font-weight: 700; }
       table { width: 100%; border-collapse: collapse; }
-      th, td { padding: 0.7rem 0.55rem; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
-      th { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); }
+      th, td { padding: 0.7rem 0.55rem; border-bottom: 1px solid var(--lesson-line); text-align: left; vertical-align: top; }
+      th { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--lesson-muted); }
       ul.clean { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.75rem; }
-      .sentence { padding: 0.95rem 1rem; border: 1px solid var(--line); border-radius: 1rem; background: rgba(255,255,255,0.7); }
+      .sentence { padding: 0.95rem 1rem; border: 1px solid var(--lesson-line); border-radius: 1rem; background: rgba(255,255,255,0.7); }
       .sentence strong { display: block; }
       .small { font-size: 0.92rem; }
-      footer { margin-top: 2rem; color: var(--muted); font-size: 0.92rem; }
+      footer { margin-top: 2rem; color: var(--lesson-muted); font-size: 0.92rem; }
       .word-grid { display: grid; gap: 0.85rem; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); }
-      .word-card { border: 1px solid var(--line); border-radius: 1rem; padding: 0.9rem; background: rgba(255,255,255,0.72); }
+      .word-card { border: 1px solid var(--lesson-line); border-radius: 1rem; padding: 0.9rem; background: rgba(255,255,255,0.72); }
       .word-main { display: flex; align-items: center; gap: 0.65rem; font-size: 1.05rem; font-weight: 700; }
       .emoji { font-size: 1.35rem; }
-      .breadcrumbs { margin-top: 0.8rem; color: var(--muted); font-size: 0.9rem; }
+      .breadcrumbs { margin-top: 0.8rem; color: var(--lesson-muted); font-size: 0.9rem; }
       .breadcrumbs a { text-decoration: none; }
       @media (max-width: 640px) {
         .shell { width: min(100% - 1rem, 1120px); }
