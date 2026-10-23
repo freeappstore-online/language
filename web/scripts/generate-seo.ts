@@ -11,7 +11,8 @@ const webRoot = path.resolve(__dirname, '..')
 const dataDir = path.join(webRoot, 'src', 'data')
 const publicDir = path.join(webRoot, 'public')
 const learnDir = path.join(publicDir, 'learn')
-const siteUrl = 'https://freelanguageapp.online'
+// Path B production hosting; the retired Pages domain redirects here.
+const siteUrl = 'https://language.freeappstore.online'
 
 const targetLanguages = LANGUAGES.filter((language) => language.code !== 'en')
 const rtlLanguages = new Set(['ar'])
