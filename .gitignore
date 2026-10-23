@@ -9,3 +9,7 @@ web/public/learn/
 web/public/robots.txt
 web/public/sitemap.xml
 .gstack/
+
+# Required install icons are production assets.
+!web/public/icon-192.png
+!web/public/icon-512.png
